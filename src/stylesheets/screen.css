@@ -1,0 +1,13 @@
+body {
+	background-color: #FFFFFF;	
+}
+
+#logo {
+	text-indent: -9000px;
+	background: url(../images/brevemente.jpg) no-repeat;
+	height: 328px;
+	width: 464px;
+	/*margin: 10% auto 0px auto;*/
+	position: absolute;
+	left: 30%; top: 30%;	
+}
