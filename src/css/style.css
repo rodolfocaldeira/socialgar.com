@@ -484,6 +484,24 @@ span.email {
 	margin: 30px 10px 25px 10px;
 }
 
+.map_frame {
+	padding: 10px;
+	border: 2px solid #201E3F;
+	display:inline;
+	float:left;
+	margin: 30px 10px 25px 10px;
+}
+
+#map_canvas {
+	width: 508px;
+	height: 350px;
+}
+
+#map_canvas .infowindow {
+	font-size: 65%; 
+	margin: 0; 
+}
+
 .get_in_touch {
 	padding-top: 65px;
 	margin-top: 25px;	

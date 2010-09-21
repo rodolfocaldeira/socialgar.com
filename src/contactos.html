@@ -92,9 +92,15 @@
     </div>
 
     <div class="map_frame">
-      <iframe width="508" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?hl=en&amp;ie=UTF8&amp;oe=UTF8&amp;msa=0&amp;msid=106722844439980275358.000490baab9adcdfa137f&amp;ll=37.136526,-8.543941&amp;spn=0,0&amp;output=embed"></iframe>
+      <div id="map_canvas"></div>
     </div>
-    
+
+      <!--    <div class="map_frame">
+      
+<iframe width="508" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?hl=en&amp;ie=UTF8&amp;oe=UTF8&amp;msa=0&amp;msid=106722844439980275358.000490baab9adcdfa137f&amp;ll=37.136526,-8.543941&amp;spn=0,0&amp;output=embed"></iframe>
+    </div>
+    -->
+
     <div class="clear"></div>
       
     <footer class="grid_10 push_1">
@@ -133,6 +139,7 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
   <script>!window.jQuery && document.write('<script src="js/jquery-1.4.2.min.js"><\/script>')</script>
 
+  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
   <script src="js/plugins.js?v=1"></script>
   <script src="js/script.js?v=1"></script>
@@ -141,11 +148,52 @@
     <script src="js/dd_belatedpng.js?v=1"></script>
   <![endif]-->
 
-
   <!-- yui profiler and profileviewer - remove for production -->
   <script src="js/profiling/yahoo-profiling.min.js?v=1"></script>
   <script src="js/profiling/config.js?v=1"></script>
   <!-- end profiling code -->
+  
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+      var latlng = new google.maps.LatLng(37.136550, -8.543701);
+      var opts = {
+        zoom: 17,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.HYBRID,
+        scrollwheel: false,
+        streetViewControl: true
+      };
+      var map = new google.maps.Map(document.getElementById("map_canvas"), opts);
+      
+      var image = 'images/map-marker.png';
+      
+      var marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+        title: 'Socialgar Seguros Lda.',
+        icon: image
+      });
+      
+      var text = '<div class="infowindow" style="width: 140px;height: 100px;">' +
+          '<p><strong>Socialgar Lda.</strong></p>' +
+          '<p>Rua Poeta João Brás, Edíficio Marte - Lote 3 Loja 1</p>' +
+          '<p>Apartado 879, 8501-918 Portimão</p>' + 
+          '</div>';
+
+      var infowindow = new google.maps.InfoWindow({
+        content: text,
+        maxWidth: 100
+      });
+
+      google.maps.event.addListener(marker, 'click',
+      function() {
+          infowindow.open(map, marker);
+      });
+      
+    });
+
+  </script>
   
 </body>
 </html>
