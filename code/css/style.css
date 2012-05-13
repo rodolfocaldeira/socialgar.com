@@ -277,6 +277,10 @@ nav a {
 	font-size: 80%;
 }
 
+#services {
+    margin-bottom: 80px;
+}
+
 #services li {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, sans-serif;
 	display: inline;
@@ -359,8 +363,9 @@ nav a {
 }
 
 .punchline {
-	margin: 55px 0 35px 10px;
+	margin: 0px 0 10px 10px;
 }
+
 
 /** footer */
 
@@ -438,6 +443,10 @@ span.email {
 
 #team li.last {
 	margin-right: 0;
+}
+
+#team li.second-row {
+    margin-top: 50px;
 }
 
 #team img {
