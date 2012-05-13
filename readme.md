@@ -15,6 +15,8 @@ After almost two years of waiting this website is finaly going to see the light 
 4. Updated the deploy.rb file using Intervir.com.pt
 5. Prepated the server for the deployment
 	- `cap deploy:setup`
+	- `cap deploy` struggled a little bit for some reason it wasn't working
+	
 
 	
 
