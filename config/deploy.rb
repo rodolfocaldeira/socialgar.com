@@ -23,6 +23,7 @@ task :copy_to_prod do
     run "chmod 755 #{current_release}/public/ -R"
 
     htaccess = <<-EOF
+ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase #{rewrite_base}
