@@ -4,6 +4,14 @@ Socialgar website.
 
 ## Log
 
+### 2013-05-18
+
+Updated the tracking code on the 404 page http://analytics.blogspot.com/2006/09/tip-tracking-404-pages.html
+
+### 2013-05-17
+
+Updated 404 paths. They are now absolute instead of relative. Updated the .htaccess created by the deploy file.
+
 ### 2013-05-13
 
 After almost two years of waiting this website is finaly going to see the light of the day.
