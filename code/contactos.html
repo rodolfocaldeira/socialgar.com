@@ -160,16 +160,37 @@
       };
       var map = new google.maps.Map(document.getElementById("map_canvas"), opts);
       
-      var image = 'images/map-marker.png';
+      var image = new google.maps.MarkerImage(
+        'images/contactos/map/marker.png',
+        new google.maps.Size(23,22),
+        new google.maps.Point(0,0),
+        new google.maps.Point(12,22)
+      );
+
+      var shadow = new google.maps.MarkerImage(
+        'images/contactos/map/marker-shadow.png',
+        new google.maps.Size(37,22),
+        new google.maps.Point(0,0),
+        new google.maps.Point(12,22)
+      );
+
+      var shape = {
+        coord: [16,0,17,1,19,2,20,3,21,4,21,5,22,6,22,7,22,8,22,9,22,10,22,11,22,12,22,13,22,14,22,15,21,16,21,17,20,18,19,19,17,20,16,21,6,21,5,20,3,19,2,18,1,17,1,16,0,15,0,14,0,13,0,12,0,11,0,10,0,9,0,8,0,7,0,6,1,5,1,4,2,3,3,2,5,1,6,0,16,0],
+        type: 'poly'
+      };
+
+      // var image = 'images/map-marker.png';
       
       var marker = new google.maps.Marker({
         position: latlng,
         map: map,
         title: 'Socialgar Seguros Lda.',
-        icon: image
+        icon: image,
+        shadow: shadow,
+        shape: shape
       });
       
-      var text = '<div class="infowindow" style="width: 140px;height: 100px;">' +
+      var text = '<div class="infowindow" style="width: 200px; font-size: 0.8em;">' +
           '<p><strong>Socialgar Lda.</strong></p>' +
           '<p>Rua Poeta João Brás, Edíficio Marte - Lote 3 Loja 1</p>' +
           '<p>Apartado 879, 8501-918 Portimão</p>' + 
