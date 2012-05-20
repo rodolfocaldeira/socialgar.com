@@ -4,6 +4,10 @@ Socialgar website.
 
 ## Log
 
+### 2013-05-20
+
+Designed a new favicon in Pixelmator.
+
 ### 2013-05-18
 
 Updated the tracking code on the 404 page http://analytics.blogspot.com/2006/09/tip-tracking-404-pages.html
